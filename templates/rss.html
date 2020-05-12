@@ -1,0 +1,54 @@
+<html style="background-color: #0b4a52;font-family: 'Fira Sans';background-image: url("blue.jpg")" lang="ba">
+<style>
+    h1{
+        font-family: revert;
+        font-size: 40px;
+        color: rgba(255, 72, 0, 0.92);
+    }
+    body{
+        color: aqua;
+    }
+
+</style>
+
+<h1 style="color: greenyellow;text-align: center;font-family: Rachana">Welcome to Samin Web App</h1>
+<p style="color: red;text-align: center;">A developing server. Contain serious bugs</p>
+
+<div style="text-align: center;background-color: aqua;color: blue;padding: 5px">
+<p id=".city">
+    {{ weather.city }}({{ weather.country }}) | {{ weather.temperature }} C
+ | {{ weather.description }}</div>
+
+
+
+
+
+<div style="color: red;background-color: lime; padding: 5px;text-align: center">
+    <p>Currency exchange rate aganist USD : {{ currenry }} BDT</p>
+</div>
+
+
+<div style="color: yellow">
+<h2>The Headlines</h2>
+<h3>Search avaiable now only BBC, CNN and FOX news</h3>
+<form>
+    <input type="text" name="publication" placeholder="search">
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+
+<body>
+{% for i in articles %}
+    <b><a href="{{ i.link }}">{{ i.title }}</a></b><br>
+    <i>{{ i.published }}</i><br>
+    <p>{{ i.summary }}</p>
+    <br>
+{% endfor %}
+</body>
+<div style="color:greenyellow;text-align: center">
+<p>Email : sazinsamin50@gmail.com</p>
+<p>Desing and Developed By Sazin Reshed Samin</p>
+<p>@Copyright 2020</p>
+</div>
+</html>
